@@ -1,0 +1,51 @@
+{
+  "name": "electron-vue-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron-webpack",
+    "build": "electron-webpack && electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.2",
+    "electron-webpack": "^2.2.1",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.1"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.9"
+  },
+  "build": {
+    "appId": "electron-vue-bootstrap",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/atom.ico"
+    }
+  }
+}
